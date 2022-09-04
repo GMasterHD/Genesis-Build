@@ -1,0 +1,26 @@
+{
+  "name": "genesisbuild",
+  "version": "1.0.0",
+  "description": "A build tool using premake",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "genesis": "node ./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "htttps://github.com/gmasterhd/genesis-build/"
+  },
+  "author": "GMasterHD",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^2.0.2",
+    "commander": "^9.4.0",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.1",
+    "inquirer": "^9.1.1",
+    "nanospinner": "^1.1.0",
+    "simple-git": "^3.14.0"
+  }
+}

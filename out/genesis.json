@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "name": "Client",
+      "type": 33,
+      "src": "src/",
+      "tests": "tests/",
+      "lang": 49
+    }
+  ],
+  "packages": [
+    {
+      "name": "spdlog",
+      "package": {
+        "type": "git",
+        "repo": "https://github.com/GMasterHD/spdlog"
+      },
+      "library": {
+        "type": 18,
+        "includeDir": "include/"
+      }
+    },
+    {
+      "name": "spdlog2",
+      "package": {
+        "type": "git",
+        "repo": "https://github.com/GMasterHD/spdlog"
+      },
+      "library": {
+        "type": 18,
+        "includeDir": "include/"
+      }
+    },
+    {
+      "name": "spdlog3",
+      "package": {
+        "type": "git",
+        "repo": "https://github.com/GMasterHD/spdlog"
+      },
+      "library": {
+        "type": 18,
+        "includeDir": "include/"
+      }
+    },
+    {
+      "name": "spdlog4",
+      "package": {
+        "type": "git",
+        "repo": "https://github.com/GMasterHD/spdlog"
+      },
+      "library": {
+        "type": 18,
+        "includeDir": "include/"
+      }
+    }
+  ],
+  "links": {
+    "Client": ["spdlog2", "spdlog4"]
+  }
+}
