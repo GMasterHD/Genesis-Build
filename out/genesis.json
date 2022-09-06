@@ -1,60 +1,70 @@
 {
-  "projects": [
-    {
-      "name": "Client",
-      "type": 33,
-      "src": "src/",
-      "tests": "tests/",
-      "lang": 49
+    "name": "Genesis Engine",
+    "version": "1.0.0",
+    "description": "A voxel engine",
+    "ide": 66,
+    "buildsystem": 81,
+    "git": "",
+    "configs": [
+        {
+            "name": "Debug",
+            "defines": [
+                "GB_DEBUG"
+            ],
+            "symbols": true,
+            "optimization": 80
+        },
+        {
+            "name": "Release",
+            "defines": [
+                "GB_RELEASE"
+            ],
+            "symbols": true,
+            "optimization": 81
+        },
+        {
+            "name": "Dist",
+            "defines": [
+                "GB_DIST"
+            ],
+            "symbols": false,
+            "optimization": 83
+        }
+    ],
+    "projects": [
+        {
+            "name": "Sandbox",
+            "type": 33,
+            "src": "Sandbox/src/",
+            "tests": "Sandbox/tests/",
+            "lang": 49
+        },
+        {
+            "name": "Genesis Core",
+            "type": 34,
+            "src": "Genesis/src/",
+            "tests": "Genesis/tests/",
+            "lang": 49
+        }
+    ],
+    "packages": [
+        {
+            "name": "spdlog",
+            "package": {
+                "type": "git",
+                "repo": "https:://github.com/gmasterhd/spdlog"
+            },
+            "library": {
+                "type": 18,
+                "includeDir": "include/"
+            },
+            "premakeFile": "premake5.lua"
+        }
+    ],
+    "links": {
+        "Sandbox": [
+            "Genesis Core",
+            "spdlog"
+        ]
     }
-  ],
-  "packages": [
-    {
-      "name": "spdlog",
-      "package": {
-        "type": "git",
-        "repo": "https://github.com/GMasterHD/spdlog"
-      },
-      "library": {
-        "type": 18,
-        "includeDir": "include/"
-      }
-    },
-    {
-      "name": "spdlog2",
-      "package": {
-        "type": "git",
-        "repo": "https://github.com/GMasterHD/spdlog"
-      },
-      "library": {
-        "type": 18,
-        "includeDir": "include/"
-      }
-    },
-    {
-      "name": "spdlog3",
-      "package": {
-        "type": "git",
-        "repo": "https://github.com/GMasterHD/spdlog"
-      },
-      "library": {
-        "type": 18,
-        "includeDir": "include/"
-      }
-    },
-    {
-      "name": "spdlog4",
-      "package": {
-        "type": "git",
-        "repo": "https://github.com/GMasterHD/spdlog"
-      },
-      "library": {
-        "type": 18,
-        "includeDir": "include/"
-      }
-    }
-  ],
-  "links": {
-    "Client": ["spdlog2", "spdlog4"]
-  }
 }
